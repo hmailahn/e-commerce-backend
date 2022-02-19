@@ -3,8 +3,9 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// get all products
-//works
+
+// get all product
+
 router.get('/', (req, res) => {
   Product.findAll({
     attributes: [
@@ -32,7 +33,7 @@ router.get('/', (req, res) => {
 });
 
 
-// works
+
 router.get('/:id', (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
@@ -70,7 +71,7 @@ router.get('/:id', (req, res) => {
   })
 })
 
-// works
+
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
@@ -144,7 +145,6 @@ router.put('/:id', (req, res) => {
     });
 });
 
-//works
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
   Product.destroy({
